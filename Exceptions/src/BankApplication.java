@@ -1,6 +1,7 @@
-import exceprions.WrongAccountException;
-import exceprions.WrongCurrencyException;
-import exceprions.WrongOperationException;
+import exceptions.WrongAccountException;
+import exceptions.WrongCurrencyException;
+import exceptions.WrongOperationException;
+import exceptions.WrongAccountException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,8 @@ public class BankApplication {
     public void process(String accountId, int amount, String currency) throws Exception {
 
         accounts.stream().filter(account -> account.getId().equals(accountId))
-                .findAny().orElseThrow(WrongAccountException::new);
+                .findAny().orElseThrow(() -> new WrongAccountException());
+
 
         accounts.stream().filter(account -> account.getId().equals(accountId))
                 .filter(account -> account.getCurrency().equals(currency))

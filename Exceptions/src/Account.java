@@ -9,6 +9,7 @@ public class Account {
         this.currency = currency;
     }
 
+    //region Getter&Setter
     public String getId() {
         return id;
     }
@@ -32,6 +33,7 @@ public class Account {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
+    //endregion
 
     @Override
     public String toString() {
