@@ -1,9 +1,7 @@
 package exceptions;
 
-public class WrongCurrencyException extends NullPointerException {
-
-
+public class WrongCurrencyException extends IllegalArgumentException {
     public WrongCurrencyException() {
-        super("This Currency does not exist");
+        super("The account has another currency");
     }
 }

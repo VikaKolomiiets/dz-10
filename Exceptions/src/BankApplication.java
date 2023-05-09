@@ -44,9 +44,10 @@ public class BankApplication {
         int randomInt = new Random().nextInt(2);
 
        if(randomInt == 1){
-           throw new Exception();
+           throw new Exception("An error occurred while processing, please try again");
        }
 
         desiredAccount.setBalance(desiredAccount.getBalance() - amount);
     }
+
 }
